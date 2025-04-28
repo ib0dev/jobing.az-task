@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Son vakansiyalar</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Son vakansiyalar</h1>
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Axtarış edin..."
+        oninput="filterJobs()"
+      />
+      <select id="filterSelect" onchange="filterJobs()">
+        <option value="">Hamısı</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Satış Meneceri">Satış Meneceri</option>
+        <option value="Mühasib">Mühasib</option>
+      </select>
+    </div>
+    <div class="container" id="jobContainer">
+      <div class="card" data-title="Frontend Developer">
+        <h2>Frontend Developer</h2>
+        <p>Şirkət: ABC Tech</p>
+        <button onclick="showDetails('Frontend Developer')">Ətraflı bax</button>
+      </div>
+      <div class="card" data-title="Satış Meneceri">
+        <h2>Satış Meneceri</h2>
+        <p>Şirkət: XYZ Sales</p>
+        <button onclick="showDetails('Satış Meneceri')">Ətraflı bax</button>
+      </div>
+      <div class="card" data-title="Mühasib">
+        <h2>Mühasib</h2>
+        <p>Şirkət: Finance Co</p>
+        <button onclick="showDetails('Mühasib')">Ətraflı bax</button>
+      </div>
+    </div>
+  </body>
+</html>
